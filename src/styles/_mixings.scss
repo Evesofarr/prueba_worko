@@ -21,3 +21,12 @@
     border: none;
 }
 
+@mixin after-menu{
+    content: "";
+        display: block;
+        width: 0;
+        height: 3px;
+        background: $worko-pink;
+        transition: width 0.3s;
+}
+

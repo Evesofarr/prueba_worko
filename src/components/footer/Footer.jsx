@@ -17,7 +17,7 @@ export default function Footer() {
                     <div className="emailForm">
                         <input className="email" type="text" placeholder="E-mail" id="email" name="email" />
                         <div className="terms">
-                            <input type="checkbox" id="terms" name="terms" />
+                            <input className="checkbox" type="checkbox" id="terms" name="terms" />
                             <label for="terms">I have read and accepted the <a href="#">Terms and Conditions.</a></label>
                         </div>
                         <button><img src={submitBtn} alt="Submit button" /></button>
