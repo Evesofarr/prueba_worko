@@ -97,6 +97,8 @@ main {
             .pink,
             .black {
                 @include color-picker-desktop;
+                position: relative;
+                z-index: 3;
             }
             .text-tshirt, .text-bottle{
                 border-bottom: none;
