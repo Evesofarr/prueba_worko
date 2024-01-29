@@ -121,6 +121,10 @@ footer {
                     align-items: center;
                     grid-area: terms;
 
+                    label{
+                        padding-bottom: 1rem;
+                    }
+
                     // .checkbox {
                     //     appearance: none;
                     //     border: 1px solid white;
