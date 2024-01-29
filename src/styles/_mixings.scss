@@ -1,0 +1,23 @@
+@import './variables';
+
+@mixin buy-btn-mobile {
+    color: $worko-black;
+    font-size: $p-button-mobile;
+    border: none;
+    width: auto;
+    display: block;
+    padding-top: 3rem;
+}
+
+@mixin color-picker-mobile {
+    width: 32px;
+    height: 14px;
+    border: none;
+}
+
+@mixin color-picker-desktop{
+    width: 45.8px;
+    height: 14px;
+    border: none;
+}
+

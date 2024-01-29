@@ -1,0 +1,133 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings.scss";
+
+footer {
+    background-color: $worko-black;
+    color: $white-color;
+    position: static;
+    height: auto;
+    bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        font-size: $p-contact-mobile;
+        font-weight: 300;
+        margin: 3rem 1rem;
+
+        a {
+            color: $white-color;
+            margin-top: 1rem;
+        }
+    }
+
+    .phrase {
+        font-size: $p-footer-mobile;
+        font-weight: bold;
+        margin: 3rem 1rem;
+    }
+
+    .emailForm {
+
+        .email {
+            font-size: $input-email-mobile;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $white-color;
+            padding-bottom: 0.5rem;
+            padding-top: 2rem;
+            width: 90%;
+            margin: 0rem 1rem;
+            color: $white-color;
+        }
+
+        .terms {
+            display: flex;
+
+            input[type="checkbox"] {
+                margin: 1rem 1rem;
+                background-color: $worko-black;
+                color: $worko-black;
+            }
+
+            label {
+                font-size: $p-terms-mobile;
+                width: 65%;
+                padding-top: 1rem;
+
+                a {
+                    color: $white-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    button {
+        display: inline-block;
+        background: none;
+        border: none;
+        width: 100px;
+        margin: 2rem 1rem;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+
+        .contact {
+            font-size: $p-contact-desktop;
+            width: 40%;
+            padding: 3rem 5rem;
+        }
+
+        .footer-info {
+            width: 60%;
+
+            .phrase {
+                font-size: $p-footer-desktop;
+                padding: 3rem 0rem;
+            }
+
+            .emailForm {
+                padding-right: 7rem;
+                display: grid;
+                grid-template-columns: 0.7fr 1.3fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 0px 0px;
+                grid-template-areas:
+                    "email email email"
+                    "terms terms button";
+
+                .email {
+                    width: 100%;
+                    margin: 0px;
+                    font-size: $input-email-desktop;
+                    grid-area: email;
+                }
+
+                .terms {
+                    font-size: $p-terms-desktop;
+                    align-items: center;
+                    grid-area: terms;
+                }
+
+                button {
+                    margin-left: 14rem;
+                    grid-area: button;
+                }
+            }
+        }
+
+    }
+}

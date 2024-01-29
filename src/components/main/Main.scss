@@ -1,0 +1,133 @@
+@import "../../styles/mixings.scss";
+@import "../../styles/variables.scss";
+
+main {
+    .mainPhrase {
+        font-size: $p-info-landing-mobile;
+        margin: 1rem;
+    }
+
+    .tshirt-product,
+    .bottle-product {
+        z-index: 1;
+        height: auto;
+        overflow: unset;
+    }
+
+    .tshirt-img {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        transform: scaleX(-1);
+        transform: matrix(-0.99, -0.25, -0.25, 0.99, 0, 0);
+        z-index: -2;
+        position: relative;
+        top: -9rem;
+        right: -5rem;
+    }
+
+    .bottle-img {
+        width: 60%;
+        height: 60%;
+        z-index: -2;
+        position: relative;
+        top: -9rem;
+        right: -5rem;
+    }
+
+    .text-tshirt,
+    .text-bottle {
+        border-bottom: 1px solid $worko-black;
+        position: relative;
+        bottom: -14rem;
+        margin: 0px 1rem;
+
+        h1 {
+            font-size: $h1-mobile;
+        }
+
+        p {
+            font-size: $p-mobile;
+            width: 55%;
+            padding: 1.5rem 0rem;
+        }
+
+        .black {
+            @include color-picker-mobile;
+            background-color: $worko-black;
+            margin-right: 1rem;
+        }
+
+        .pink {
+            @include color-picker-mobile;
+            background-color: $worko-pink;
+        }
+
+        .btn-buy {
+            @include buy-btn-mobile;
+            background-color: transparent;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    main {
+        .mainPhrase {
+            font-size: $p-info-landing-desktop;
+            margin-left: 45%;
+            padding-right: 5rem;
+        }
+
+        .tshirt-product,
+        .bottle-product {
+            width: 50%;
+
+            h1 {
+                font-size: $h1-desktop;
+            }
+
+            p {
+                font-size: $p-desktop;
+                width: 45%;
+                padding-top: 0px;
+            }
+
+            .pink,
+            .black {
+                @include color-picker-desktop;
+            }
+            .text-tshirt, .text-bottle{
+                border-bottom: none;
+            }
+
+            .btn-buy{
+                padding-left: 80%;
+                position: relative;
+                top: -4.5rem;
+                border-bottom: 1px solid $worko-black;
+
+                .btn-img{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .tshirt-img {
+            width: 50%;
+            transform: matrix(-0.99, -0.15, -0.15, 0.99, 0, 0);
+            top: -13rem;
+            right: -9rem;
+        }
+
+        .bottle-product {
+            margin-left: auto;
+        }
+        .bottle-img{
+            width: 32%;
+            top: -15rem;
+            right: -15rem;
+        }
+    }
+}

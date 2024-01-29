@@ -1,0 +1,109 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixings.scss";
+
+.container {
+    display: flex;
+    margin: auto;
+    padding: 15px;
+    flex-direction: column;
+    width: 90%;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    height: 900px;
+    margin-bottom: 3rem;
+}
+
+.first-word,
+.second-word,
+.third-word {
+    font-size: $p-landing-desktop;
+    font-weight: bold;
+}
+
+.first-word {
+    border-bottom: 1px solid $worko-black;
+    z-index: 1;
+}
+
+.second-word {
+    z-index: 3;
+}
+
+.third-word {
+    border-top: 1px solid $worko-black;
+    z-index: 1;
+}
+
+.third-word p,
+.first-word p {
+    text-align: left;
+    margin-left: 5.5rem;
+}
+
+.second-word p {
+    text-align: right;
+    margin-right: 15.5rem;
+}
+
+.mug {
+    width: 645px;
+    height: 601px;
+    z-index: 2;
+    align-self: flex-end;
+    margin-top: -48rem;
+    margin-right: -0.3rem;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 0;
+        width: 100%;
+    }
+
+    .landing {
+        height: 500px;
+    }
+
+    .first-word,
+    .second-word,
+    .third-word {
+        font-size: $p-landing-mobile;
+        padding: 0.3rem;
+    }
+
+    .first-word {
+        z-index: 2;
+    }
+
+    .second-word p {
+        text-align: left;
+        z-index: 2;
+        width: 370px;
+        margin-left: -6.5rem;
+    }
+
+    .third-word {
+        z-index: 2;
+    }
+
+    .third-word p,
+    .first-word p {
+        text-align: right;
+        margin-left: 4.5rem;
+        width: 100%;
+    }
+
+    .mug {
+        display: flex;
+        margin: auto;
+        height: 310px;
+        width: 340px;
+        margin-top: -25.5rem;
+        margin-left: 5rem;
+        z-index: 2;
+    }
+}
